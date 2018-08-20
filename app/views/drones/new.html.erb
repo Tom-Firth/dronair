@@ -1,0 +1,11 @@
+<h2>Add you drone</h2>
+
+<%= simple_form_for @drone do |f| %>
+  <%= f.input :name, label: "Your drone's name", error: "Drone's name is mandatory, please specify one" %>
+  <%= f.input :brand, label: 'Brand', error: "Brand is mandatory, please specify one" %>
+  <%= f.input :autonomy, label: 'Autonomy', error: "Autonomy is mandatory, please specify one" %>
+  <%= f.input :price, label: 'Price', error: "Price is mandatory, please specify one" %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Back to the drones'list" , drones_path  %>
