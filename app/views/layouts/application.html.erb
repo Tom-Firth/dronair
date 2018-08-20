@@ -11,14 +11,10 @@
   </head>
   <body>
     <%=  render 'layouts/navbar' %>
-    <%=  render 'layouts/banner' %>
-      <div class="container">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        <%= yield %>
-        <%= javascript_include_tag 'application' %>
-        <%= javascript_pack_tag 'application' %>
-      </div>
+    <%= render 'layouts/flashes' %>
+      <%= yield %>
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_pack_tag 'application' %>
   </body>
 
 </html>
