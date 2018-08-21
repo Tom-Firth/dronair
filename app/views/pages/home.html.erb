@@ -129,3 +129,12 @@
 
 
 
+<h2>Drones</h2>
+
+<% @drones.each do |drone| %>
+<div>
+  <p><%= drone.name %></p>
+  <p><%= drone.price %></p>
+  <p><%= drone.owner.user_name %></p>
+</div>
+<% end %>
