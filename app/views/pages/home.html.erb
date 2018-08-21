@@ -104,6 +104,7 @@
       </div>
     </div>
 
+<% @drones.each do |drone| %>
     <div class="col-xs-12 col-sm-4">
       <div class="card">
         <div class="hovereffect">
@@ -114,24 +115,16 @@
         </div>
         <article class="info">
           <div class="name">
-            <h3>Title</h3>
+            <h3><%= drone.name %></h3>
             <p>Brand</p>
           </div>
           <div class="price">
-            <h3>$485<span class="pd"> per day</span></h3>
+            <h3><%= drone.price %><span class="pd"> per day</span></h3>
           </div>
         </article>
       </div>
     </div>
   </div>
 </div>
-
-<h2>Drones</h2>
-
-<% @drones.each do |drone| %>
-<div>
-  <p><%= drone.name %></p>
-  <p><%= drone.price %></p>
-  <p><%= drone.owner.user_name %></p>
-</div>
 <% end %>
+
