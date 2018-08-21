@@ -2,9 +2,9 @@
 
 <%= simple_form_for @drone do |f| %>
   <%= f.input :name, value: "#{@drone.name}", label: "Your drone's name", error: "Drone's name is mandatory, please specify one" %>
-  <%= f.input :brand, label: 'Brand', error: "Brand is mandatory, please specify one" %>
-  <%= f.input :autonomy, label: 'Autonomy', error: "Autonomy is mandatory, please specify one" %>
-  <%= f.input :price, label: 'Price', error: "Price is mandatory, please specify one" %>
+  <%= f.input :brand, value: "#{@drone.brand}", label: 'Brand', error: "Brand is mandatory, please specify one" %>
+  <%= f.input :autonomy, value: "#{@drone.autonomy}", label: 'Autonomy', error: "Autonomy is mandatory, please specify one" %>
+  <%= f.input :price, value: "#{@drone.price}", label: 'Price', error: "Price is mandatory, please specify one" %>
   <%= f.button :submit %>
 <% end %>
 
