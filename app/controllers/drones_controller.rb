@@ -9,7 +9,7 @@ class DronesController < ApplicationController
   end
 
   def create
-    @drone = Cocktail.new(drone_params)
+    @drone = Drone.new(drone_params)
     if @drone.save
       redirect_to drone_path(@drone)
     else
