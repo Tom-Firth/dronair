@@ -1,6 +1,11 @@
 <%=  render 'layouts/banner' %>
 <div class="container">
   <h1>The sky is the limit</h1>
+  <% @drones.each do |drone| %>
+  <div>
+    <p><%= drone.name %></p>
+  </div>
+  <% end %>
 </div>
 
 
