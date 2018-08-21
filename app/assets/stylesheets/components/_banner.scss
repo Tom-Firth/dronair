@@ -7,4 +7,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  z-index: 2;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 }
