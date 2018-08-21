@@ -5,6 +5,12 @@ h3.index-title {
   margin: 50px 0px;
 }
 
+span.pd {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: lighter;
+}
+
 .card {
   text-align: left;
   -webkit-transition: all 1s ease;
@@ -27,22 +33,12 @@ h3.index-title {
 }
 
 .card article h3 {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  font-weight: bold;
+  margin: 0;
+  line-height: 1.5;
 }
 
-.card article h4 {
-  font-size: 16px;
-  margin: 0px;
-}
-
-.card article p i {
-  font-size: 14px;
-}
-
-.price p {
-  margin: 0px;
+.name p {
+  margin: 0;
 }
 
 
@@ -130,11 +126,29 @@ transition:all .2s ease-in-out;
 padding:10px;
 }
 
-.hovereffect a.info {
+.hovereffect a.available {
 text-decoration:none;
 display:inline-block;
 color:#39FF14;
 border: 1px solid #39FF14;
+background-color:transparent;
+opacity:0;
+filter:alpha(opacity=0);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+margin:0px;
+padding:7px 21px;
+font-size: 12px;
+font-weight: 500;
+letter-spacing: 1px;
+border-radius: 20px;
+}
+
+.hovereffect a.unavailable {
+text-decoration:none;
+display:inline-block;
+color:#D90022;
+border: 1px solid #D90022;
 background-color:transparent;
 opacity:0;
 filter:alpha(opacity=0);
