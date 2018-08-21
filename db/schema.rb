@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 2018_08_20_131608) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.bigint "drones_id"
-    t.bigint "users_id"
+    t.bigint "drone_id"
+    t.bigint "user_id"
     t.integer "days"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["drones_id"], name: "index_bookings_on_drones_id"
-    t.index ["users_id"], name: "index_bookings_on_users_id"
+    t.index ["drone_id"], name: "index_bookings_on_drone_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "drones", force: :cascade do |t|
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 2018_08_20_131608) do
     t.string "autonomy"
     t.integer "price"
     t.string "video"
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_drones_on_users_id"
+    t.index ["user_id"], name: "index_drones_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_131608) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "drones", column: "drones_id"
-  add_foreign_key "bookings", "users", column: "users_id"
-  add_foreign_key "drones", "users", column: "users_id"
+  add_foreign_key "bookings", "drones"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "drones", "users"
 end

@@ -6,7 +6,7 @@ class CreateDrones < ActiveRecord::Migration[5.2]
       t.string :autonomy
       t.integer :price
       t.string :video
-      t.references :users, foreign_key: true
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

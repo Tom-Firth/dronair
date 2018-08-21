@@ -2,8 +2,9 @@
 
 <% @drones.each do |drone| %>
 <div>
-  <p><%= drone.name %></p>
+  <p><%= link_to "#{drone.name}", drone_path(drone)  %></p>
   <p><%= drone.price %></p>
-  <p><%= drone.owner %></p>
+  <p><%= drone.owner.user_name %></p>
 </div>
 <% end %>
+
