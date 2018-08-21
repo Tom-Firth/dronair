@@ -12,6 +12,7 @@ class DronesController < ApplicationController
   def create
     @drone = Drone.new(drone_params)
     @drone.owner = current_user
+
     if @drone.save
       redirect_to drone_path(@drone)
     else
