@@ -1,0 +1,13 @@
+<h2>My drones</h2>
+
+<% @my_drones.each do |my_drone| %>
+<div>
+  <p><%= my_drone.name %></p>
+  <p><%= my_drone.brand %></p>
+  <p><%= my_drone.autonomy %></p>
+  <p><%= my_drone.video %></p>
+  <p><%= my_drone.price %></p>
+  <p><%= my_drone.bookinks.days %></p>
+</div>
+<% end %>
+
