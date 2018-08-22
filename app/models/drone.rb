@@ -1,6 +1,8 @@
 class Drone < ApplicationRecord
   belongs_to :owner, foreign_key: :user_id,  class_name: "User"
 
+  mount_uploader :photo, PhotoUploader
+
   validates :name, presence: true
   validates :brand, presence: true
   validates :autonomy, presence: true

@@ -6,6 +6,8 @@
 
         <%= simple_form_for @drone do |f| %>
           <%= f.input :name, label: "Your drone's name", error: "Drone's name is mandatory, please specify one" %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
           <%= f.input :brand, label: 'Brand', error: "Brand is mandatory, please specify one" %>
           <%= f.input :autonomy, label: 'Battery life', error: "Battery life is mandatory, please specify one" %>
           <%= f.input :video, label: 'Video resolution', error: "Video resolution is mandatory, please specify one" %>
