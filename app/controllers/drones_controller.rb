@@ -41,13 +41,13 @@ class DronesController < ApplicationController
   end
 
   def my_drones
-    @my_drones = Drone.where(:owner == current_user)
+    @my_drones = Drone.where(owner: current_user.id)
   end
 
    private
 
   def drone_params
-    params.require(:drone).permit(:name, :brand, :autonomy, :price, :video)
+    params.require(:drone).permit(:name, :brand, :autonomy, :price, :video, :photo)
   end
 
 end

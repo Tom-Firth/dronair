@@ -1,9 +1,16 @@
 .form-design {
-    background-color: #ffffff;
+    background-color: rgba(255,255,255,0.8);
     margin: 20px 0px;
     border-radius: 20px;
-    box-shadow: 0px 1px 10px #ccc;
+    // box-shadow: 0px 1px 10px #ccc;
     padding: 20px;
+    color: $gray;
+}
+
+.form-bg {
+  background-image: url("https://images.unsplash.com/photo-1525386796155-5a611d1b05bb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=339b4f145452a428bc7c0a22ac500953&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover !important;
+  background-position: center;
 }
 
 .vertically-align {
