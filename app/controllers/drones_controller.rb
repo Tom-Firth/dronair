@@ -44,10 +44,17 @@ class DronesController < ApplicationController
     @my_drones = Drone.where(owner: current_user.id)
   end
 
+  def change
+    @drone = Drone.find(params[:id])
+    @drone.available = !@drone.available
+    @drone.save
+    redirect_to @drone
+  end
+
    private
 
   def drone_params
-    params.require(:drone).permit(:name, :brand, :autonomy, :price, :video, :photo)
+    params.require(:drone).permit(:name, :brand, :autonomy, :price, :video, :available)
   end
 
 end
