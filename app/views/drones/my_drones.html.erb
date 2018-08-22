@@ -9,5 +9,6 @@
   <p>Brand: <%= my_drone.brand %></p>
   <p>Battery: <%= my_drone.autonomy %></p>
   <p>Resolution: <%= my_drone.video %></p>
+  <%= link_to "Delete", drone_path(my_drone), method: :delete, data: { confirm: "Are you sure?" } %>
 </div>
 <% end %>
