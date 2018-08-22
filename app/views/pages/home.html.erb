@@ -7,7 +7,7 @@
       <div class="col-xs-12 col-sm-4">
         <div class="card">
           <div class="hovereffect">
-            <img class="img-responsive" src="https://images.unsplash.com/photo-1521405924368-64c5b84bec60?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=77959163d82e5918179b9b70c497185f&auto=format&fit=crop&w=1934&q=80" width="360" height="250" alt="">
+            <%= cl_image_tag drone.photo, height: 270, width: 360, crop: :fill %>
             <div class="overlay">
               <% if drone.available == true %>
                 <a class="info available" href=<%= "#{drone_path(drone)}" %>>Available</a>
@@ -20,6 +20,7 @@
             <div class="name">
               <h3><%= drone.name %></h3>
               <p><%= drone.brand %></p>
+              <p><%= drone.owner.user_name %></p>
             </div>
             <div class="price">
               <h3>$<%= drone.price %><span class="pd"> per day</span></h3>

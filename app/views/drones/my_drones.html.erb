@@ -1,12 +1,45 @@
-<h2>My drones</h2>
-
-<% @my_drones.each do |my_drone| %>
-<div>
-  <hr size=5px>
-  <p><%= my_drone.name %></p>
-  <p><%= my_drone.brand %></p>
-  <p><%= my_drone.autonomy %></p>
-  <p><%= my_drone.video %></p>
+<div class="container">
+  <h3 class="index-title">My Drones</h3>
+  <div class="row row-eq-height drone-index">
+    <% @my_drones.each do |my_drone| %>
+        <div class="col-xs-12 col-md-4 left-pad">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+              <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+              <div class="item active">
+                 <p><%= cl_image_tag my_drone.photo, height: 270, width: 360, crop: :fill %></p>
+              <div class="item">
+                 <p><%= cl_image_tag my_drone.photo, height: 270, width: 360, crop: :fill %></p>
+              <div class="item">
+                 <p><%= cl_image_tag my_drone.photo, height: 270, width: 360, crop: :fill %></p>
+            </div>
+                  <!-- Carousel controls -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4 my-drone-details">
+          <div class="drone-details">
+            <div class="drone-name"><p class="drone-keys">Name: </p> <h4 class="my-title"><%= my_drone.name %></h4></div>
+            <div class="drone-brand"><p class="drone-keys">Brand: </p><h4><%= my_drone.brand %></h4></div>
+            <div class="drone-life"><p class="drone-keys">Battery life: </p><h4><%= my_drone.autonomy %></h4></div>
+            <div class="drone-video"><p class="drone-keys">Video specs: </p><h4><%= my_drone.video %></h4></div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4 drone-price">
+          <h3>$<%= my_drone.price %><span class="pd"> per day</span></h3>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
-<% end %>
-

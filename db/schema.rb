@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_08_22_143211) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "available", default: true
+    t.string "photo"
     t.index ["user_id"], name: "index_drones_on_user_id"
   end
 
