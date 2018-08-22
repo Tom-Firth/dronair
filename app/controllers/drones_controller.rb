@@ -37,7 +37,7 @@ class DronesController < ApplicationController
   def destroy
     @drone = Drone.find(params[:id])
     @drone.destroy
-    redirect_to drones_path
+    redirect_to my_drones_path
   end
 
   def my_drones
@@ -47,7 +47,7 @@ class DronesController < ApplicationController
    private
 
   def drone_params
-    params.require(:drone).permit(:name, :brand, :autonomy, :price, :video)
+    params.require(:drone).permit(:name, :brand, :autonomy, :price, :video, :photo)
   end
 
 end
