@@ -54,11 +54,7 @@ class DronesController < ApplicationController
    private
 
   def drone_params
-<<<<<<< HEAD
     params.require(:drone).permit(:name, :brand, :autonomy, :price, :video, :available)
-=======
-    params.require(:drone).permit(:name, :brand, :autonomy, :price, :video, :photo)
->>>>>>> 0e34be9ece107a784742789ff7b53d01f48a5b32
   end
 
 end
