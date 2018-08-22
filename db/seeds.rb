@@ -10,13 +10,17 @@ Drone.delete_all
 User.delete_all
 
 users = ["Nay", "Andy", "Matho", "Tom", "Cartos"]
+
+price = [49, 59, 69, 79, 89, 99, 109, 119, 129, 129, 139, 149, 159, 169]
+
+
 drones = [
-  "1" => { name: "Hubsan H501S", brand: "Gwendoll", autonomy: "14 minutes", price: "220", video: "1080P" },
-  "2" => { name: "Runner 250 Pro Racing", brand: "Walkera", autonomy: "21 minutes", price: "160", video: "720P" },
-  "3" => { name: "FairytaleMM", brand: "Walkera", autonomy: "29 minutes", price: "140", video: "4K" },
-  "4" => { name: "XciteRC 15003850", brand: "FPV Racing", autonomy: "10 mins", price: "120", video: "1280P" },
-  "5" => { name: "Phantom 3", brand: "DJI", autonomy: "10 mins", price: "150", video: "1280P" },
-  "6" => { name: "Phantom 4 Pro", brand: "DJI", autonomy: "30 mins", price: "200", video: "4K" }
+  "1" => { name: "Hubsan H", brand: "Gwendoll", autonomy: "14 minutes", price: price.sample, video: "1080P" },
+  "2" => { name: "Runner 250", brand: "Walkera", autonomy: "21 minutes", price: price.sample, video: "720P" },
+  "3" => { name: "FairytaleMM", brand: "Walkera", autonomy: "29 minutes", price: price.sample, video: "4K" },
+  "4" => { name: "XciteRC", brand: "FPV Racing", autonomy: "10 minutes", price: price.sample, video: "1280P" },
+  "5" => { name: "Phantom 3", brand: "DJI", autonomy: "10 minutes", price: price.sample, video: "1280P" },
+  "6" => { name: "Phantom 4", brand: "DJI", autonomy: "30 minutes", price: price.sample, video: "4K" }
 ]
 
 # 1. https://www.amazon.fr/Gwendoll-Brushless-Altitude-Automatique-Quadcopter/dp/B07FM8XTH2/ref=sr_1_47?ie=UTF8&qid=1534932939&sr=8-47&keywords=drone+video
