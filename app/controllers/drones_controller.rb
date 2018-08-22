@@ -40,10 +40,6 @@ class DronesController < ApplicationController
     redirect_to drones_path
   end
 
-  def my_drones
-    @my_drones = Drone.current_user
-  end
-
    private
 
   def drone_params
