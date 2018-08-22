@@ -1,12 +1,20 @@
-<h2>Add your drone</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <div class="form-design">
+        <h2>Add your drone</h2>
 
-<%= simple_form_for @drone do |f| %>
-  <%= f.input :name, label: "Your drone's name", error: "Drone's name is mandatory, please specify one" %>
-  <%= f.input :brand, label: 'Brand', error: "Brand is mandatory, please specify one" %>
-  <%= f.input :autonomy, label: 'Autonomy', error: "Autonomy is mandatory, please specify one" %>
-  <%= f.input :video, label: 'Video resolution', error: "Video resolution is mandatory, please specify one" %>
-  <%= f.input :price, label: 'Price', error: "Price is mandatory, please specify one" %>
-  <%= f.button :submit %>
-<% end %>
+        <%= simple_form_for @drone do |f| %>
+          <%= f.input :name, label: "Your drone's name", error: "Drone's name is mandatory, please specify one" %>
+          <%= f.input :brand, label: 'Brand', error: "Brand is mandatory, please specify one" %>
+          <%= f.input :autonomy, label: 'Autonomy', error: "Autonomy is mandatory, please specify one" %>
+          <%= f.input :video, label: 'Video resolution', error: "Video resolution is mandatory, please specify one" %>
+          <%= f.input :price, label: 'Price', error: "Price is mandatory, please specify one" %>
+          <%= f.button :submit, "Add drone", class: "btn-primary" %>
+        <% end %>
 
-<%= link_to "Back to the drones'list" , root_path  %>
+        <%= link_to "Back to the drones'list" , root_path  %>
+      </div>
+    </div>
+  </div>
+</div>
