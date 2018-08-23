@@ -3,5 +3,17 @@
 <p><%= @drone.brand %></p>
 <p><%= @drone.autonomy %></p>
 <p><%= @drone.price %></p>
+<% @drone.bookings.each do |booking| %>
+<%= booking.days %>
+<% end %>
 
 <%= link_to "Back to the drones'list", root_path  %>
+
+
+<hr>
+
+<%= simple_form_for([@drone, @booking]) do |f| %>
+  <%= f.input :days %>
+  <%= f.submit %>
+<% end %>
+

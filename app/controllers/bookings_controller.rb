@@ -9,14 +9,15 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @drone = Drone.find(params[:drone_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.drone = params[:id]
+    @booking.drone = @drone
 
     if @booking.save
-      redirect_to @booking
+      redirect_to @drone
     else
-      render new
+      render 'drone/show'
     end
   end
 
