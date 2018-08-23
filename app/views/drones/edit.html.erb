@@ -1,20 +1,30 @@
-<h2>Edit you drone</h2>
+<div class="vertically-align">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="form-design">
+        <h2>Edit you drone</h2>
 
-<%= simple_form_for @drone do |f| %>
-  <%= f.input :name, value: "#{@drone.name}", label: "Your drone's name", error: "Drone's name is mandatory, please specify one" %>
-  <%= f.input :brand, value: "#{@drone.brand}", label: 'Brand', error: "Brand is mandatory, please specify one" %>
-  <%= f.input :autonomy, value: "#{@drone.autonomy}", label: 'Autonomy', error: "Autonomy is mandatory, please specify one" %>
-  <%= f.input :price, value: "#{@drone.price}", label: 'Price', error: "Price is mandatory, please specify one" %>
-  <%= f.button :submit, "Edit", class: "btn-primary" %>
-<% end %>
+        <%= simple_form_for @drone do |f| %>
+          <%= f.input :name, value: "#{@drone.name}", label: "Your drone's name", error: "Drone's name is mandatory, please specify one" %>
+          <%= f.input :brand, value: "#{@drone.brand}", label: 'Brand', error: "Brand is mandatory, please specify one" %>
+          <%= f.input :autonomy, value: "#{@drone.autonomy}", label: 'Autonomy', error: "Autonomy is mandatory, please specify one" %>
+          <%= f.input :price, value: "#{@drone.price}", label: 'Price', error: "Price is mandatory, please specify one" %>
+          <%= f.button :submit, "Edit", class: "btn-primary" %>
+        <% end %>
 
-<p>Your drone is :
-  <% if @drone.available == true %>
-    Available
-  <% else %>
-    Unavailable
-  <% end %>
-  <%= link_to "Change", dronechange_path(@drone), method: :post %>
-</p>
+        <p>Your drone is :
+          <% if @drone.available == true %>
+            Available
+          <% else %>
+            Unavailable
+          <% end %>
+          <%= link_to "Change", dronechange_path(@drone), method: :post %>
+        </p>
+        <%= link_to "Back to the drones'list" ,root_path  %>
 
-<%= link_to "Back to the drones'list" ,root_path  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
