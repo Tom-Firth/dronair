@@ -8,4 +8,13 @@
   <%= f.button :submit, "Edit", class: "btn-primary" %>
 <% end %>
 
+<p>Your drone is :
+  <% if @drone.available == true %>
+    Available
+  <% else %>
+    Unavailable
+  <% end %>
+  <%= link_to "Change", dronechange_path(@drone), method: :post %>
+</p>
+
 <%= link_to "Back to the drones'list" ,root_path  %>
