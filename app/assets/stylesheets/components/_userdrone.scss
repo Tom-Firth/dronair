@@ -24,21 +24,39 @@
   align-items: center;
 }
 
-.my-drone-details {
+.text-col {
   display: flex;
   align-items: center;
 }
 
 .drone-price {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  position: relative;
   padding: 10px 20px;
 }
 
-.drone-name, .drone-brand, .drone-life, .drone-video {
+.delete-edit {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.pricing {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+}
+
+.edit-margin {
+  margin-right: 10px;
+}
+
+.text-key {
   display: flex;
   align-items: center;
+}
+
+.drone-keys {
+  font-weight: lighter;
 }
 
 p.drone-keys {

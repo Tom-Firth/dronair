@@ -26,12 +26,16 @@ class DronesController < ApplicationController
 
   def edit
     @drone = Drone.find(params[:id])
+    # @my_drones = Drone.where(owner: current_user.id)
   end
 
   def update
+    # @my_drones = Drone.where(owner: current_user.id)
+    # @my_drones.update(drone_params)
+        # @my_drones.update(drone_params)
     @drone = Drone.find(params[:id])
     @drone.update(drone_params)
-    redirect_to drone_path(@drone)
+    redirect_to my_drones_path
   end
 
   def destroy
