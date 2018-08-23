@@ -2,21 +2,42 @@
   <h3 class="index-title">My Drones</h3>
     <% @my_drones.each do |my_drone| %>
     <div class="row row-eq-height drone-index">
-      <div class="col-xs-12 col-md-4 left-pad">
-        <%= cl_image_tag my_drone.photo, height: 270, width: 360, crop: :fill %>
-      </div>
-      <div class="col-xs-12 col-md-4 my-drone-details">
-        <div class="drone-details">
-          <div class="drone-name"><p class="drone-keys">Name: </p> <h4 class="my-title"><%= my_drone.name %></h4></div>
-          <div class="drone-brand"><p class="drone-keys">Brand: </p><h4><%= my_drone.brand %></h4></div>
-          <div class="drone-life"><p class="drone-keys">Battery life: </p><h4><%= my_drone.autonomy %></h4></div>
-          <div class="drone-video"><p class="drone-keys">Video specs: </p><h4><%= my_drone.video %></h4></div>
+        <div class="col-xs-12 col-md-4 left-pad">
+          <%= cl_image_tag my_drone.photo, height: 270, width: 360, crop: :fill, class: "my-drone-image" %>
         </div>
+        <div class="col-xs-12 col-md-6 my-drone-details text-col">
+          <div class="col-xs-12 col-md-3">
+            <h4 class="drone-keys">Name: </h4>
+            <h4 class="drone-keys">Brand: </h4>
+            <h4 class="drone-keys">Battery life: </h4>
+            <h4 class="drone-keys">Video specs: </h4>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <h4 class="my-title"><%= my_drone.name %></h4>
+            <h4><%= my_drone.brand %></h4>
+            <h4><%= my_drone.autonomy %></h4>
+            <h4><%= my_drone.video %></h4>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <h4 class="drone-keys">Lender: </h4>
+            <h4 class="drone-keys">From: </h4>
+            <h4 class="drone-keys">To: </h4>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <h4 class="my-title">Nayeli</h4>
+            <h4>26/05/2018</h4>
+            <h4>28/05/2018</h4>
+          </div>
+        </div>
+    <div class="col-xs-12 col-md-2 drone-price">
+      <div class="delete-edit">
+        <%= link_to '<i class="far fa-edit" style="font-size:26px;"></i>'.html_safe, editmydrone_path(my_drone), class: "edit-margin" %>
+        <%= link_to '<i class="far fa-times-circle" style="font-size:26px;"></i>'.html_safe, drone_path(my_drone), method: :delete, data: { confirm: "Are you sure?" } %>
       </div>
-      <div class="col-xs-12 col-md-4 drone-price">
-        <%= link_to "Delete", drone_path(my_drone), method: :delete, data: { confirm: "Are you sure?" } %>
+      <div class="pricing">
         <h3>$<%= my_drone.price %><span class="pd"> per day</span></h3>
       </div>
-      </div>
-    <% end %>
+    </div>
+  </div>
+  <% end %>
 </div>
