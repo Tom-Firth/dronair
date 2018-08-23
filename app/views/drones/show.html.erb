@@ -3,5 +3,10 @@
 <p><%= @drone.brand %></p>
 <p><%= @drone.autonomy %></p>
 <p><%= @drone.price %></p>
+<%= cl_image_tag @drone.photo, height: 270, width: 360, crop: :fill %>
 
 <%= link_to "Back to the drones'list", root_path  %>
+
+<%=  render 'layouts/calendar' %>
+
+
