@@ -1,0 +1,68 @@
+.left-pad {
+  padding-left: 0px;
+}
+
+.my-drone-image {
+  border-radius: 15px 0px 0px 15px;
+}
+
+.my-drone-image {
+  width: 100%;
+}
+
+.drone-index {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin-bottom: 50px;
+}
+
+.my-drone-list {
+  display: flex;
+  align-items: center;
+}
+
+.my-drone-details {
+  display: flex;
+  align-items: center;
+}
+
+.drone-price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.drone-name, .drone-brand, .drone-life, .drone-video {
+  display: flex;
+  align-items: center;
+}
+
+p.drone-keys {
+  margin: 0;
+  padding-right: 15px;
+}
+
+h2.my-title {
+  text-transform: uppercase;
+}
+
+.my-drone-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.carousel-control.left {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+.carousel-control.right {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+.carousel-inner, .carousel, .carousel-control.left {
+  border-radius: 15px 0px 0px 15px;
+}
+
