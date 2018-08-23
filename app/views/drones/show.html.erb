@@ -1,7 +1,21 @@
-<h2><%= @drone.name %></h2>
-
-<p><%= @drone.brand %></p>
-<p><%= @drone.autonomy %></p>
-<p><%= @drone.price %></p>
-
-<%= link_to "Back to the drones'list", root_path  %>
+<div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-1">
+        <div class="elements">
+          <div class="pic"><%= cl_image_tag @drone.photo, height: 270, width: 360, crop: :fill %></div>
+          <div class="elem"><h2><%= @drone.name %></h2></div>
+          <div class="elem"><p><%= @drone.brand %></p></div>
+          <div class="elem"><p><%= @drone.autonomy %></p></div>
+          <div class="elem"><p><%= @drone.price %></p></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-offset-1">
+        <div class="pic"><%= cl_image_tag @drone.photo, height: 270, width: 360, crop: :fill %></div>
+        <div class="elem"><h2><%= @drone.name %></h2></div>
+        <div class="elem"><p><%= @drone.brand %></p></div>
+        <div class="elem"><p><%= @drone.autonomy %></p></div>
+        <div class="elem"><p><%= @drone.price %></p></div>
+      </div>
+    </div>
+</div>
+      <%= link_to "Back to the drones'list", root_path  %>
