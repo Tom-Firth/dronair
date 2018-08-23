@@ -9,8 +9,11 @@
           <div class="hovereffect">
             <%= cl_image_tag drone.photo, height: 270, width: 360, crop: :fill %>
             <div class="overlay">
-              <a class="info available" href=<%= "#{drone_path(drone)}" %>>Available</a>
-         <!-- <a class="info unavailable" href="#">Unavailable</a> -->
+              <% if drone.available == true %>
+                <a class="info available" href=<%= "#{drone_path(drone)}" %>>Available</a>
+              <% else drone.available == false %>
+                <a class="info unavailable" href=<%= "#{drone_path(drone)}" %>>Unavailable</a>
+              <% end %>
             </div>
           </div>
           <article class="info">

@@ -37,17 +37,24 @@ class DronesController < ApplicationController
   def destroy
     @drone = Drone.find(params[:id])
     @drone.destroy
-    redirect_to drones_path
+    redirect_to my_drones_path
   end
 
   def my_drones
     @my_drones = Drone.where(owner: current_user.id)
   end
 
+  def change
+    @drone = Drone.find(params[:id])
+    @drone.available = !@drone.available
+    @drone.save
+    redirect_to @drone
+  end
+
    private
 
   def drone_params
-    params.require(:drone).permit(:name, :brand, :autonomy, :price, :video, :photo)
+    params.require(:drone).permit(:name, :brand, :autonomy, :price, :video, :available)
   end
 
 end

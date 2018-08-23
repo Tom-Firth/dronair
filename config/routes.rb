@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'my_drones', to: 'drones#my_drones'
+  post '/drones/:id/edit/change', to: 'drones#change', as: "dronechange"
   resources :drones do
     resources :bookings, only: [:index, :show, :create]
   end
