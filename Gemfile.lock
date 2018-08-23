@@ -181,6 +181,8 @@ GEM
     sassc (1.12.1)
       ffi (~> 1.9.6)
       sass (>= 3.3.0)
+    simple_calendar (2.3.0)
+      rails (>= 3.0)
     simple_form (4.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -242,6 +244,7 @@ DEPENDENCIES
   rails (= 5.2.1)
   redis
   sass-rails
+  simple_calendar (~> 2.0)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
