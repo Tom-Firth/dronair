@@ -3,6 +3,14 @@ class DronesController < ApplicationController
 
   def index
     @drones = Drone.all
+
+    @markers = @drones.map do |drone|
+      {
+        lat: drone.latitude,
+        lng: drone.longitude,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def new
